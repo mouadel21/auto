@@ -175,11 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Pointing to your Node backend
-                const response = await fetch('http://localhost:3000/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
+                const response = await fetch(
+                  "http://auto-production-90cd.up.railway.app/contact",
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                  },
+                );
 
                 if (response.ok) {
                     feedbackMsg.textContent = currentLang === 'fr' 
